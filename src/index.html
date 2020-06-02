@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Аренда авто</title>
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -14,7 +15,7 @@
 <body>
   <main class="main">
     <header class="header">
-      <div class="container">
+      <div class="container container--fluid">
         <div class="menu">
           <div class="logo menu__logo wow fadeInLeft">
             <img src="img/logo.png" alt="Ставрополье" class="logo__image">
@@ -37,14 +38,164 @@
         </div>
         <!-- /.menu -->
       </div>
-    </header>
-    <div class="hero">
-      <div class="container">
-        <h1 class="hero__title">Аренда авто в Пятигорске</h1>
-        <div class="hero__subtitle">Ставропольский край как на ладони</div>
+      <div class="hero">
+        <div class="container">
+          <h1 class="hero__title">Аренда авто в Пятигорске</h1>
+          <div class="hero__subtitle">Ставропольский край как на ладони</div>
+        </div>
       </div>
-    </div>
+    </header>
+
+    <section class="section beauties">
+      <div class="container">
+        <div class="section-heading beauties__section-heading">
+          <h2 class="section-title">Красоты Ставрополья</h2>
+          <div class="section-subtitle">Надежный автомобиль — залог лучших впечатлений!</div>
+        </div>
+
+        <div class="video beauties__video">
+          <img src="img/beuties-bg.png" alt="beuties__video" class="video-bg">
+          <img src="img/play.svg" alt="play" class="play">
+        </div>
+
+        <div class="beauties__videos videos">
+          <div class="videos__info">
+            <p class="videos__text">Интересные места Ставропольского края <span class="text--primary">эксклюзивно для
+                вас!</span></p>
+            <span class="videos__all">Все видео
+              <img src="img/icon-video.svg" alt="video">
+            </span>
+          </div>
+          <div class="swiper-container swiper-no-swiping videos-wrap">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper beauties-swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="video-item">
+                  <div class="video-item__images">
+                    <img src="img/video-2.jpg" alt="video" class="video--bg">
+                    <img src="img/play.svg" alt="play" class="play">
+                  </div>
+                  <p class="video-item__text">Цейский заповедник близ Северной Осетии</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="video-item">
+                  <div class="video-item__images">
+                    <img src="img/video-2.jpg" alt="video" class="video--bg">
+                    <img src="img/play.svg" alt="play" class="play">
+                  </div>
+                  <p class="video-item__text">Цейский заповедник близ Северной Осетии</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="video-item">
+                  <div class="video-item__images">
+                    <img src="img/video-2.jpg" alt="video" class="video--bg">
+                    <img src="img/play.svg" alt="play" class="play">
+                  </div>
+                  <p class="video-item__text">Цейский заповедник близ Северной Осетии</p>
+                </div>
+              </div>
+
+
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section impressions">
+      <div class="container">
+        <div class="section-heading impressions__section-heading">
+          <h2 class="section-title section-title--dark">Впечатления клиентов</h2>
+          <div class="section-subtitle section-subtitle--dark">Ваши впечатления — наша мотивация</div>
+        </div>
+        <div class="persons-wrap">
+          <div class="person">
+            <div class="person__image">
+              <img src="img/person-1.png" alt="Большаков О.В.">
+            </div>
+            <h4 class="person__name">Большаков О.В.</h4>
+            <p class="person__text">Это было что-то невообразимое!! Если бы не этот автомобиль, наше путешествие бы не
+              состоялось!</p>
+          </div>
+          <div class="person">
+            <div class="person__image">
+              <img src="img/person-2.png" alt="Волков Н.Б.">
+            </div>
+            <h4 class="person__name">Волков Н.Б.</h4>
+            <p class="person__text">Нет слов, одни эмоции... СПАСИБО вам ребята! Отличный автомобиль, цена и ваше
+              отношение - РЕСПЕКТ!</p>
+          </div>
+          <div class="person">
+            <div class="person__image">
+              <img src="img/person-3.png" alt="Новиков К.Ф.">
+            </div>
+            <h4 class="person__name">Новиков К.Ф.</h4>
+            <p class="person__text">Чтобы кто не говорил - без авто за две недели мало что можно увидеть когда
+              путешествуешь «дикарем».. РЕКОМЕНДУЮ!</p>
+          </div>
+          <div class="person">
+            <div class="person__image">
+              <img src="img/person-4.png" alt="Шубин Т.И.">
+            </div>
+            <h4 class="person__name">Шубин Т.И.</h4>
+            <p class="person__text">Все супер! Дастик ни разу не подвел, а <span class="text--dark">спуск по дороге
+                жизни</span> на этом красавце -
+              просто на всю жизнь...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about">
+      <div class="container">
+        <div class="about-wrap">
+          <div class="swiper-container swiper-no-swiping about-slider-wrap">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper about-swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img src="img/about-1.jpg" alt="car" class="about__img">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/about-1.jpg" alt="car" class="about__img">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/about-1.jpg" alt="car" class="about__img">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/about-1.jpg" alt="car" class="about__img">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/about-1.jpg" alt="car" class="about__img">
+              </div>
+
+
+            </div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="about__info">
+            <h2 class="about__title">О нашем автомобиле</h2>
+            <span class="about__subtitle">Чистый салон</span>
+            <p class="about__text">Любая поездка по Ставрополью всегда комфортнее когда салон чист и опрятен - наш салон
+              не исключение!
+              <span class="text--small">(обязательное условие аренды - возвращение автомобиля в чистом виде)</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+  <script src="js/jquery.min.js"></script>
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 

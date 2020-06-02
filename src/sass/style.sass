@@ -6,8 +6,8 @@ $primary: #ff6600
 // grid
 .container
   width: 85%
-  max-width: 1225px
   margin: auto
+  max-width: 1225px
 .row
   display: flex
   align-items: flex-start
@@ -16,7 +16,7 @@ $primary: #ff6600
   &-30
     flex-basis: 30%
   &-50
-    width: 50%
+    flex-basis: 45%
 // basic
 *, *:before, *:after
   box-sizing: border-box
@@ -28,13 +28,34 @@ body
   font-weight: normal
 img
   max-width: 100%
-
+.text
+  &--primary
+    color: $primary
+  &--dark
+    color: #000000
+  &--small
+    color: #777777
+.section
+  &-title
+    margin: 0
+    color: $light
+    font-size: 2.5rem
+    margin-bottom: 2rem
+    &--dark
+      color: #000000
+  &-subtitle
+    color: #dddddd
+    &--dark
+      color: #777777
 // main section
 .main
-  position: relative
+  // position: relative
+.header
+  // position: relative
+  padding-top: 4rem
+  padding-bottom: 30rem
   background: #000 url('../img/main-bg.jpg') no-repeat center
   background-size: cover
-  min-height: 100vh
   color: $light
   &::before
     content: ''
@@ -44,10 +65,8 @@ img
     width: 100%
     height: 100%
     background-color: rgba(#222, 0.2)
-.header
-  position: relative
-  padding-top: 6rem
 .menu
+  position: relative
   display: flex
   justify-content: space-between
   align-items: center
@@ -102,19 +121,194 @@ img
     transition: all 0.3s
 .hero
   position: relative
+  padding-top: 2.78rem
   padding-left: 11%
-  padding-top: 3.78rem
   &__title
-    font-size: 6rem
+    font-size: 5rem
     max-width: 27rem
     margin: 0
     margin-bottom: 2.21rem
-    line-height: 6rem
   &__subtitle
     max-width: 19rem
     font-size: 2rem
     color: #dddddd
 
+.beauties
+  // background-color: #f7f4f2
+  padding-left: 11%
+  padding-bottom: 10rem
+  margin-top: -20rem
+  position: relative
+  &__section-heading
+    position: absolute
+    top: 91px
+    z-index: 3
+.video
+  display: flex
+  margin: auto
+  min-height: 36.142rem
+  max-width: 69rem
+  position: relative
+  &s
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    padding-top: 10rem
+    position: relative
+    &__info
+      flex-basis: 35%
+    &__text
+      margin: 0
+      color: #000000
+      max-width: 22rem
+      font-size: 2.1rem
+      margin-bottom: 7rem
+    &__all
+      font-size: 1.35rem
+      img
+        margin-left: 1.2rem
+    &-wrap
+      flex-basis: 61%
+  &-item
+    position: relative
+    min-height: 12.28rem
+    max-width: 21.85rem
+    cursor: pointer
+    &:hover
+      .video-item__images
+        &::before
+          display: flex
+      .video-item__text
+        color: $active
+    &__images
+      position: relative
+      &::before
+        display: none
+        content: ''
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        z-index: 3
+        background-color: rgba($active, 0.8)
+    &__text
+      font-size: 1.1rem
+.play
+  position: absolute
+  cursor: pointer
+  transition: all 0.2s
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  margin: auto
+  overflow: auto
+  border-radius: 50%
+  border: 1px solid transparent
+  z-index: 5
+  &:hover
+    border: 1px solid rgba($light, 0.24)
+    padding: 1rem
+    background-color: transparent
+.swiper
+  &-button
+    &-prev, &-next
+      top: 6rem
+      width: 54px
+      height: 54px
+      &::after
+        display: none
+    &-prev
+      left: -25px
+      transform: rotate(180deg)
+      background: url('../img/next.svg') no-repeat center
+    &-next
+      right: -2%
+      background: url('../img/next.svg') no-repeat center
+
+.impressions
+  padding: 10rem 0
+  // background-color: #f7f4f2
+  &__section-heading
+    text-align: center
+    margin-bottom: 7rem
+.persons-wrap
+  display: flex
+  justify-content: space-around
+  align-items: center
+  padding-left: 11%
+.person
+  flex-basis: 20%
+  &__image
+    display: inline-block
+    position: relative
+    align-items: flex-end
+    margin-bottom: 3rem
+    margin-left: -2rem
+    z-index: 2
+    &::after
+      content: ''
+      position: absolute
+      right: 0
+      bottom: -1rem
+      width: 48px
+      height: 48px
+      background: $light url('../img/icon-person.png') no-repeat center
+      z-index: -1
+  &__name
+    margin: 0
+    margin-bottom: 2rem
+  &__text
+    max-width: 11.78rem
+    color: #777777
+
+.about
+  padding: 7rem 0
+  &-wrap
+    display: flex
+  &-slider-wrap
+    position: relative
+    flex-basis: 60%
+  .swiper
+    &-pagination
+      position: relative
+      color: #000000
+      bottom: 1rem
+      &-current
+        &::before
+          content: '0'
+      &-total
+        &::before
+          content: '0'
+    &-button
+      &-prev, &-next
+        top: 50%
+        z-index: 999
+      &-prev
+        left: -2rem
+      &-next
+        right: -2rem
+  &__info
+    flex-basis: 40%
+    margin-left: 7rem
+    z-index: -1
+  &__title
+    margin: 0
+    font-size: 3rem
+    max-width: 14.28rem
+    margin-bottom: 5rem
+  &__subtitle
+    display: block
+    font-size: 2rem
+    margin-bottom: 3rem
+  &__text
+    margin: 0
+    max-width: 21.71rem
+    font-size: 1.2rem
+    span
+      display: block
+      margin-top: 2.5rem
 @media screen and ( max-width: 1200px )
   html
     font-size: 12px
@@ -131,13 +325,59 @@ img
     &__item:not(:last-child)
       margin-right: 1rem
   .hero
-    padding-left: 11%
     &__title
       font-size: 4.2rem
-
+  .video
+    min-height: auto
+    &s
+      flex-wrap: wrap
+      &__info
+        text-align: center
+        margin-bottom: 2rem
+        flex-basis: 100%
+      &-wrap
+        flex-basis: 100%
+      &__text
+        margin: auto
+        margin-bottom: 2rem
+  .impressions
+    padding: 2rem 0
+  .persons-wrap
+    flex-wrap: wrap
+    padding-left: 0
+  .person
+    flex-basis: 45%
+    text-align: center
+    margin-bottom: 3rem
+    &__image
+      margin-left: 0
+      margin-bottom: 2rem
+    &__name
+      margin-bottom: 1.5rem
+    &__text
+      margin: auto
+  .about
+    padding: 2rem 0
+    &-wrap
+      flex-wrap: wrap
+    &-slider-wrap
+      margin-bottom: 2rem
+      align-self: flex-start
+      flex-basis: 80%
+    &__info
+      flex-basis: 100%
+    &__title
+      font-size: 2rem
+      margin-bottom: 2rem
+    &__subtitle
+      font-size: 1.8rem
+      margin-bottom: 2rem
+    &__text
+      width: auto
 @media screen and ( max-width: 767px )
   .header
     padding-top: 3rem
+    height: 100vh
   .menu
     flex-direction: column
     align-items: flex-start
@@ -148,6 +388,7 @@ img
       display: block
       color: $light
       transition: all 0.3s
+      font-size: 1.5rem
       &:hover
         border-bottom: 0
   .burger
@@ -156,9 +397,44 @@ img
     margin-top: -3rem
   .hero
     padding-left: 0
-    // padding-top: 2rem
     &__title
       font-size: 3rem
       line-height: normal
     &__subtitle
       font-size: 1.5rem
+  .section
+    &-heading
+      position: static
+      text-align: center
+      margin-bottom: 2rem
+  .beauties
+    padding-left: 0
+    padding-top: 3rem
+    // margin-top: 0
+    &__videos
+      padding-top: 3rem
+  .video
+    &-item
+      margin: auto
+    &s
+      &-wrap
+        max-width: 24rem
+  .play
+    width: 30px
+    height: 30px
+  .swiper
+    &-button
+      &-prev, &-next
+        width: 30px
+        height: 30px
+        border-radius: 50%
+  .about
+    &-slider-wrap
+      flex-basis: 100%
+    &__info
+      padding-left: 0
+      margin-left: 0
+
+@media screen and ( max-width: 480px )
+  .person
+    flex-basis: 100%
