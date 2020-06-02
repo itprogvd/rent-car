@@ -35,6 +35,16 @@ img
     color: #000000
   &--small
     color: #777777
+  &--big
+    display: block
+    font-size: 5rem
+    font-weight: bold
+  &--sup
+    color: $active
+    font-size: 1.3rem
+    font-weight: normal
+    top: -2.5rem
+    margin-left: 2rem
 .section
   &-title
     margin: 0
@@ -212,20 +222,26 @@ img
     padding: 1rem
     background-color: transparent
 .swiper
+  &-slide
+    padding-left: 1.5rem
+    padding-right: 1rem
   &-button
     &-prev, &-next
-      top: 6rem
+      top: 5.5rem
       width: 54px
       height: 54px
+      border-radius: 50%
+      padding: 1rem
+      background-color: #fff
       &::after
         display: none
     &-prev
-      left: -25px
+      left: -2%
       transform: rotate(180deg)
-      background: url('../img/next.svg') no-repeat center
+      background: $light url('../img/next.svg') no-repeat center
     &-next
       right: -2%
-      background: url('../img/next.svg') no-repeat center
+      background: $light url('../img/next.svg') no-repeat center
 
 .impressions
   padding: 10rem 0
@@ -271,24 +287,32 @@ img
     position: relative
     flex-basis: 60%
   .swiper
+    &-slide
+      padding-left: 1.5rem
+      padding-right: 1.5rem
+      padding-bottom: 2rem
     &-pagination
       position: relative
       color: #000000
-      bottom: 1rem
+      bottom: 2rem
       &-current
+        font-size: 2rem
+        margin-right: 2rem
         &::before
           content: '0'
       &-total
+        color: #777777
+        margin-left: 1rem
         &::before
           content: '0'
     &-button
       &-prev, &-next
-        top: 50%
+        top: calc(50% - 27px - 1.5rem)
         z-index: 999
       &-prev
-        left: -2rem
+        left: -1.5%
       &-next
-        right: -2rem
+        right: -1.5%
   &__info
     flex-basis: 40%
     margin-left: 7rem
@@ -301,7 +325,7 @@ img
   &__subtitle
     display: block
     font-size: 2rem
-    margin-bottom: 3rem
+    margin-bottom: 2rem
   &__text
     margin: 0
     max-width: 21.71rem
@@ -309,6 +333,99 @@ img
     span
       display: block
       margin-top: 2.5rem
+
+.footer
+  position: relative
+  background: #222222 url('../img/footer-bg.jpg') no-repeat center / cover
+  color: $light
+  height: 2178px
+
+.auto
+  padding: 10rem 0
+  padding-left: 11%
+  &-wrap
+    display: flex
+    justify-content: space-between
+  &-features
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    margin-top: -7rem
+  &__section-title
+    font-size: 1.5rem
+    font-weight: normal
+    margin-bottom: 5rem
+  &-settings
+    display: flex
+    flex-direction: column
+.icons
+  display: flex
+  align-items: center
+  justify-content: space-between
+  max-width: 16rem
+  &__text
+    font-size: 1.5rem
+.complect
+  color: $secondary
+  max-width: 17.85rem
+  line-height: 1.5
+  &__title
+    color: $light
+    font-weight: normal
+    font-size: 1.2rem
+.feature
+  flex-basis: 40%
+  justify-items: flex-end
+  &:nth-child(1)
+    .feature__title
+      &::after
+        content: '+'
+        font-weight: normal
+        font-size: 2rem
+        color: $secondary
+        margin-left: -1.3rem
+  &__title
+    margin: 0
+    font-size: 5rem
+    margin-bottom: 1rem
+  &__info
+    margin: 0
+    font-size: 1rem
+    line-height: 1.5
+  &__text
+    margin: 0
+    max-width: 11rem
+    line-height: 1.5
+    margin-top: 2rem
+.tune
+  background: #222 url('../img/tune-bg.png') no-repeat center / cover
+  align-self: flex-start
+  width: 233px
+  height: 207px
+  margin-bottom: 3.21rem
+  text-align: right
+  &:nth-child(2)
+    background: #222 url('../img/tune-bg-2.png') no-repeat center / cover
+  &-wrap
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__name
+    max-width: 2rem
+    font-weight: normal
+    line-height: 1.5
+    margin-left: 3rem
+  &__img
+    margin-right: 3rem
+  &__info
+    display: block
+    font-size: 3rem
+    margin-right: 2.8rem
+    margin-top: 1rem
+  &__subtitle
+    margin-right: 2.8rem
+    color: $secondary
+
 @media screen and ( max-width: 1200px )
   html
     font-size: 12px
@@ -360,6 +477,9 @@ img
     padding: 2rem 0
     &-wrap
       flex-wrap: wrap
+    .swiper
+      &-pagination
+        bottom: 1rem
     &-slider-wrap
       margin-bottom: 2rem
       align-self: flex-start
@@ -425,10 +545,15 @@ img
   .swiper
     &-button
       &-prev, &-next
+        top: calc(50% - 15px)
         width: 30px
         height: 30px
         border-radius: 50%
   .about
+    .swiper
+      &-button
+        &-prev, &-next
+          top: calc(50% - 30px)
     &-slider-wrap
       flex-basis: 100%
     &__info
@@ -438,3 +563,12 @@ img
 @media screen and ( max-width: 480px )
   .person
     flex-basis: 100%
+  .swiper
+    &-button
+      &-prev, &-next
+        top: calc(50% - 20px)
+  .about
+    .swiper
+      &-button
+        &-prev, &-next
+          top: calc(50% - 20px)
