@@ -38,19 +38,20 @@ img {
   color: #000000; }
 
 .text--small {
-  color: #777777; }
+  color: #777777;
+  font-size: 1rem; }
 
 .text--big {
   display: block;
-  font-size: 5rem;
+  font-size: 5.7rem;
   font-weight: bold; }
 
 sup {
   color: #17bebb;
-  font-size: 1.3rem;
+  font-size: 1.9rem;
   font-weight: normal;
   top: -2.5rem;
-  margin-left: 2rem; }
+  margin-left: 2.5rem; }
 
 .section-title {
   margin: 0;
@@ -238,7 +239,7 @@ sup {
   bottom: 2rem; }
   .swiper-pagination-current {
     font-size: 2rem;
-    margin-right: 2rem; }
+    margin-right: 2.8rem; }
     .swiper-pagination-current::before {
       content: '0'; }
   .swiper-pagination-total {
@@ -277,73 +278,85 @@ sup {
 
 .persons-wrap {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding-left: 11%; }
+  margin: auto;
+  padding-left: 6%;
+  padding-right: 6%; }
 
-.person {
-  flex-basis: 20%; }
-  .person__image {
-    display: inline-block;
-    position: relative;
-    align-items: flex-end;
-    margin-bottom: 3rem;
-    margin-left: -2rem;
-    z-index: 2; }
-    .person__image::after {
-      content: '';
-      position: absolute;
-      right: 0;
-      bottom: -1rem;
-      width: 48px;
-      height: 48px;
-      background: #ffffff url("../img/icon-person.png") no-repeat center;
-      z-index: -1; }
-  .person__name {
-    margin: 0;
-    margin-bottom: 2rem; }
-  .person__text {
-    max-width: 11.78rem;
-    color: #777777; }
+.person__image {
+  display: inline-block;
+  position: relative;
+  align-items: flex-end;
+  margin-bottom: 3.3rem;
+  margin-left: -2rem;
+  z-index: 2; }
+  .person__image::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -1rem;
+    width: 48px;
+    height: 48px;
+    background: #ffffff url("../img/icon-person.png") no-repeat center;
+    z-index: -1; }
+
+.person__name {
+  margin: 0;
+  margin-bottom: 1.6rem;
+  font-size: 1.3rem; }
+
+.person__text {
+  max-width: 11.78rem;
+  color: #777777;
+  line-height: 1.8; }
 
 .about {
-  padding: 7rem 0; }
+  padding: 7rem 0;
+  background-color: #f7f4f2; }
   .about-wrap {
     display: flex; }
   .about-slider-wrap {
     position: relative;
     flex-basis: 60%; }
+  .about .swiper-pagination {
+    bottom: 11%;
+    left: -28%; }
   .about .swiper-slide {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    padding-bottom: 2rem; }
+    padding-bottom: 5rem;
+    width: 702px; }
+    .about .swiper-slide img {
+      max-width: none; }
   .about .swiper-button-prev, .about .swiper-button-next {
-    top: calc(50% - 27px - 1.5rem);
-    z-index: 999; }
+    top: calc(50% - 27px - 2.5rem);
+    z-index: 999;
+    background-color: #f7f4f2; }
   .about .swiper-button-prev {
-    left: -1.5%; }
+    left: -3%;
+    transform: rotate(180deg); }
   .about .swiper-button-next {
-    right: -1.5%; }
+    right: -3%; }
   .about__info {
     flex-basis: 40%;
-    margin-left: 7rem;
-    z-index: -1; }
+    margin-left: 7rem; }
   .about__title {
     margin: 0;
-    font-size: 3rem;
+    font-size: 2.7rem;
     max-width: 14.28rem;
-    margin-bottom: 5rem; }
+    margin-bottom: 6.9rem;
+    line-height: 1.25; }
   .about__subtitle {
     display: block;
     font-size: 2rem;
-    margin-bottom: 2rem; }
+    margin-bottom: 2.5rem; }
   .about__text {
     margin: 0;
     max-width: 21.71rem;
-    font-size: 1.2rem; }
+    font-size: 1.3rem;
+    line-height: 1.5; }
     .about__text span {
       display: block;
-      margin-top: 2.5rem; }
+      margin-top: 1.7rem; }
 
 .footer {
   position: relative;
@@ -371,9 +384,10 @@ sup {
     justify-content: center;
     margin-top: -7rem; }
   .auto__section-title {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: normal;
-    margin-bottom: 5rem; }
+    margin-bottom: 5rem;
+    line-height: 1.4; }
   .auto-settings {
     display: flex;
     flex-direction: column; }
@@ -382,18 +396,19 @@ sup {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 16rem; }
+  max-width: 18rem; }
   .icons__text {
-    font-size: 1.5rem; }
+    font-size: 1.8rem; }
 
 .complect {
   color: #777777;
   max-width: 17.85rem;
-  line-height: 1.5; }
+  line-height: 1.75; }
   .complect__title {
     color: #ffffff;
     font-weight: normal;
-    font-size: 1.2rem; }
+    font-size: 1.2rem;
+    margin-top: 2.8rem; }
 
 .feature {
   flex-basis: 40%;
@@ -406,17 +421,18 @@ sup {
     margin-left: -1.3rem; }
   .feature__title {
     margin: 0;
-    font-size: 5rem;
+    font-size: 5.9rem;
     margin-bottom: 1rem; }
   .feature__info {
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.3rem;
     line-height: 1.5; }
   .feature__text {
     margin: 0;
-    max-width: 11rem;
+    max-width: 14.5rem;
     line-height: 1.5;
-    margin-top: 2rem; }
+    margin-top: 2rem;
+    font-size: 1.35rem; }
 
 .tune {
   background: #222 url("../img/tune-bg.png") no-repeat center/cover;
@@ -626,6 +642,8 @@ sup {
 @media screen and (max-width: 1200px) {
   html {
     font-size: 12px; }
+  .about .swiper-slide img {
+    max-width: 100%; }
   .contacts-slider {
     flex-basis: 52%; } }
 
@@ -653,6 +671,8 @@ sup {
       .videos__text {
         margin: auto;
         margin-bottom: 2rem; }
+  .beauties {
+    padding-bottom: 2rem; }
   .impressions {
     padding: 2rem 0; }
   .persons-wrap {
@@ -675,6 +695,8 @@ sup {
       flex-wrap: wrap; }
     .about .swiper-pagination {
       bottom: 1rem; }
+    .about .swiper-slide {
+      max-width: none; }
     .about-slider-wrap {
       margin-bottom: 2rem;
       align-self: flex-start;
@@ -774,7 +796,11 @@ sup {
     height: 30px;
     border-radius: 50%; }
   .about .swiper-button-prev, .about .swiper-button-next {
-    top: calc(50% - 30px); }
+    top: calc(50% - 45px); }
+  .about .swiper-button-prev {
+    left: 1%; }
+  .about .swiper-button-next {
+    right: 1%; }
   .about-slider-wrap {
     flex-basis: 100%; }
   .about__info {
@@ -825,7 +851,14 @@ sup {
   .swiper-button-prev, .swiper-button-next {
     top: calc(50% - 20px); }
   .about .swiper-button-prev, .about .swiper-button-next {
-    top: calc(50% - 20px); }
+    top: calc(50% - 40px); }
+  .about__title {
+    max-width: none;
+    font-size: 1.8rem; }
+  .about__subtitle {
+    font-size: 1.5rem; }
+  .about__text {
+    font-size: 1.2rem; }
   .feature {
     flex-basis: 100%; }
   .order__form, .order__price {

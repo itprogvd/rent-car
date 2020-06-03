@@ -37,16 +37,17 @@ img
     color: #000000
   &--small
     color: #777777
+    font-size: 1rem
   &--big
     display: block
-    font-size: 5rem
+    font-size: 5.7rem
     font-weight: bold
 sup
   color: $active
-  font-size: 1.3rem
+  font-size: 1.9rem
   font-weight: normal
   top: -2.5rem
-  margin-left: 2rem
+  margin-left: 2.5rem
 .section
   &-title
     margin: 0
@@ -234,7 +235,7 @@ sup
     bottom: 2rem
     &-current
       font-size: 2rem
-      margin-right: 2rem
+      margin-right: 2.8rem
       &::before
         content: '0'
     &-total
@@ -264,22 +265,23 @@ sup
 
 .impressions
   padding: 10rem 0
-  // background-color: #f7f4f2
   &__section-heading
     text-align: center
     margin-bottom: 7rem
 .persons-wrap
   display: flex
-  justify-content: space-around
+  justify-content: space-between
   align-items: center
-  padding-left: 11%
+  margin: auto
+  padding-left: 6%
+  padding-right: 6%
 .person
-  flex-basis: 20%
+  // flex-basis: 28%
   &__image
     display: inline-block
     position: relative
     align-items: flex-end
-    margin-bottom: 3rem
+    margin-bottom: 3.3rem
     margin-left: -2rem
     z-index: 2
     &::after
@@ -293,51 +295,63 @@ sup
       z-index: -1
   &__name
     margin: 0
-    margin-bottom: 2rem
+    margin-bottom: 1.6rem
+    font-size: 1.3rem
   &__text
     max-width: 11.78rem
     color: #777777
+    line-height: 1.8
 
 .about
   padding: 7rem 0
+  background-color: #f7f4f2
   &-wrap
     display: flex
   &-slider-wrap
     position: relative
     flex-basis: 60%
   .swiper
+    &-pagination
+      bottom: 11%
+      left: -28%
     &-slide
-      padding-left: 1.5rem
-      padding-right: 1.5rem
-      padding-bottom: 2rem
+      // padding-left: 1.5rem
+      // padding-right: 1.5rem
+      padding-bottom: 5rem
+      width: 702px
+      img
+        max-width: none
     &-button
       &-prev, &-next
-        top: calc(50% - 27px - 1.5rem)
+        top: calc(50% - 27px - 2.5rem)
         z-index: 999
+        background-color: #f7f4f2
       &-prev
-        left: -1.5%
+        left: -3%
+        transform: rotate(180deg)
       &-next
-        right: -1.5%
+        right: -3%
   &__info
     flex-basis: 40%
     margin-left: 7rem
-    z-index: -1
   &__title
     margin: 0
-    font-size: 3rem
+    font-size: 2.7rem
     max-width: 14.28rem
-    margin-bottom: 5rem
+    margin-bottom: 6.9rem
+    line-height: 1.25
   &__subtitle
     display: block
     font-size: 2rem
-    margin-bottom: 2rem
+    margin-bottom: 2.5rem
   &__text
     margin: 0
     max-width: 21.71rem
-    font-size: 1.2rem
+    font-size: 1.3rem
+    line-height: 1.5
     span
       display: block
-      margin-top: 2.5rem
+      margin-top: 1.7rem
 
 .footer
   position: relative
@@ -364,9 +378,10 @@ sup
     justify-content: center
     margin-top: -7rem
   &__section-title
-    font-size: 1.5rem
+    font-size: 2rem
     font-weight: normal
     margin-bottom: 5rem
+    line-height: 1.4
   &-settings
     display: flex
     flex-direction: column
@@ -374,17 +389,18 @@ sup
   display: flex
   align-items: center
   justify-content: space-between
-  max-width: 16rem
+  max-width: 18rem
   &__text
-    font-size: 1.5rem
+    font-size: 1.8rem
 .complect
   color: $secondary
   max-width: 17.85rem
-  line-height: 1.5
+  line-height: 1.75
   &__title
     color: $light
     font-weight: normal
     font-size: 1.2rem
+    margin-top: 2.8rem
 .feature
   flex-basis: 40%
   justify-items: flex-end
@@ -398,17 +414,18 @@ sup
         margin-left: -1.3rem
   &__title
     margin: 0
-    font-size: 5rem
+    font-size: 5.9rem
     margin-bottom: 1rem
   &__info
     margin: 0
-    font-size: 1rem
+    font-size: 1.3rem
     line-height: 1.5
   &__text
     margin: 0
-    max-width: 11rem
+    max-width: 14.5rem
     line-height: 1.5
     margin-top: 2rem
+    font-size: 1.35rem
 .tune
   background: #222 url('../img/tune-bg.png') no-repeat center / cover
   align-self: flex-start
@@ -611,6 +628,11 @@ sup
 @media screen and ( max-width: 1200px )
   html
     font-size: 12px
+  .about
+    .swiper
+      &-slide
+        img
+          max-width: 100%
   .contacts
     &-slider
       flex-basis: 52%
@@ -642,6 +664,8 @@ sup
       &__text
         margin: auto
         margin-bottom: 2rem
+  .beauties
+    padding-bottom: 2rem
   .impressions
     padding: 2rem 0
   .persons-wrap
@@ -665,6 +689,8 @@ sup
     .swiper
       &-pagination
         bottom: 1rem
+      &-slide
+        max-width: none
     &-slider-wrap
       margin-bottom: 2rem
       align-self: flex-start
@@ -776,7 +802,11 @@ sup
     .swiper
       &-button
         &-prev, &-next
-          top: calc(50% - 30px)
+          top: calc(50% - 45px)
+        &-prev
+          left: 1%
+        &-next
+          right: 1%
     &-slider-wrap
       flex-basis: 100%
     &__info
@@ -831,7 +861,14 @@ sup
     .swiper
       &-button
         &-prev, &-next
-          top: calc(50% - 20px)
+          top: calc(50% - 40px)
+    &__title
+      max-width: none
+      font-size: 1.8rem
+    &__subtitle
+      font-size: 1.5rem
+    &__text
+      font-size: 1.2rem
   .feature
     flex-basis: 100%
   .order
