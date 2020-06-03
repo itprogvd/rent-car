@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/flaticon.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -252,9 +253,110 @@
         </div>
       </div>
     </section>
+
+    <section class="section order">
+      <div class="container">
+        <div class="order-wrap">
+          <div class="section-heading order__section-heading order-item">
+            <h2 class="section-title order__section-title">Заказать автомобиль в аренду</h2>
+          </div>
+          <form action="#" class="form order__form order-item">
+            <select name="days" id="days" class="select form__select">
+              <option value="tenDays" class="option select__option">10 дней <span class="select__discount">-20%</span>
+              </option>
+              <option value="fiveDays" class="option select__option">5 дней <span class="select__discount">-30%</span>
+              </option>
+              <option value="threeDays" class="option select__option">3 дня <span class="select__discount">-50%</span>
+              </option>
+              <option value="fourteenDays" class="option select__option">14 дней <span
+                  class="select__discount">-10%</span></option>
+            </select>
+            <input type="tel" name="tel" class="input form__input" placeholder="Ваш телефон">
+            <button type="submit" class="button form__button">Заказать</button>
+            <span class="promo form__promo">А у меня есть промокод!</span>
+          </form>
+          <div class="price order__price order-item">
+            <strong class="price__new">1 900 <sup class="price--sup">руб</sup></strong>
+            <span class="price__old">2 280</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section contacts">
+      <div class="container">
+        <div class="contacts-wrap">
+          <div class="requisites contacts-item">
+            <h4 class="requisites__title">Реквизиты</h4>
+            <div class="requisites__text">
+              ИП Пупкин Василий<br>
+              ОГРН: 1053601053600<br>
+              ИНН: 3664036640
+            </div>
+          </div>
+          <div class="requisites contacts-item">
+            <h4 class="requisites__title">Контакты</h4>
+            <div class="requisites__links">
+              <a href="mailto: pupkinvvv@example.ru" class="requisites__link">pupkinvvv@example.ru</a>
+              <a href="#" class="requisites__link">Договор аренды</a>
+              <a href="#" class="requisites__link">Условия</a>
+            </div>
+          </div>
+          <div class="swiper-container swiper-no-swiping contacts-slider">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper contacts-swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <h4 class="swiper-slide__title">А как осуществляется доставка и сдача автомобиля?</h4>
+                <p class="swiper-slide__text">Доставка и сдача в аэропорт Минеральных Вод <span
+                    class="text--light">бесплатная!</span></p>
+              </div>
+              <div class="swiper-slide">
+                <h4 class="swiper-slide__title">А как осуществляется доставка и сдача автомобиля?</h4>
+                <p class="swiper-slide__text">Доставка и сдача в аэропорт Минеральных Вод <span
+                    class="text--light">бесплатная!</span></p>
+              </div>
+              <div class="swiper-slide">
+                <h4 class="swiper-slide__title">А как осуществляется доставка и сдача автомобиля?</h4>
+                <p class="swiper-slide__text">Доставка и сдача в аэропорт Минеральных Вод <span
+                    class="text--light">бесплатная!</span></p>
+              </div>
+              <div class="swiper-slide">
+                <h4 class="swiper-slide__title">А как осуществляется доставка и сдача автомобиля?</h4>
+                <p class="swiper-slide__text">Доставка и сдача в аэропорт Минеральных Вод <span
+                    class="text--light">бесплатная!</span></p>
+              </div>
+
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+        <div class="social">
+          <div class="social__links">
+            <span class="social__link">
+              <i class="flaticon-vk"></i>
+            </span>
+            <span class="social__link">
+              <i class="flaticon-null"></i>
+            </span>
+            <span class="social__link">
+              <i class="flaticon-whatsapp"></i>
+            </span>
+            <span class="social__link">
+              <i class="flaticon-mail"></i>
+            </span>
+          </div>
+          <div class="social__copyright">&copy; 2020 Все права защищены</div>
+        </div>
+      </div>
+    </section>
   </footer>
   <script src="js/jquery.min.js"></script>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+  <script src="js/jquery.selectric.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 

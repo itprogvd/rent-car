@@ -70,6 +70,23 @@ document.addEventListener('DOMContentLoaded', () => {
       return '<span class="' + currentClass + '"></span>' + ' of ' + '<span class="' + totalClass + '"></span>';
     }
   });
+  var myThirdSwiper = new Swiper('.contacts-slider', {
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'fraction'
+    },
+    renderFraction: function (currentClass, totalClass) {
+      return '<span class="' + totalClass + '"></span>' +
+        ' of ' +
+        '<span class="' + currentClass + '"></span>';
+    },
+    slidesPerView: 1
+  });
 
   // var next = $('.swiper-button-next');
   // var prev = $('.swiper-button-prev');
@@ -78,5 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // next.css('left', prev.width() + 20 + bullets.width() + 20);
   // bullets.css('left', prev.width() + 20);
 
-  new WOW().init();
+  // $('select').selectric();
+
 });

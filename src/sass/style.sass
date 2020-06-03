@@ -31,6 +31,8 @@ img
 .text
   &--primary
     color: $primary
+  &--light
+    color: $light
   &--dark
     color: #000000
   &--small
@@ -39,12 +41,12 @@ img
     display: block
     font-size: 5rem
     font-weight: bold
-  &--sup
-    color: $active
-    font-size: 1.3rem
-    font-weight: normal
-    top: -2.5rem
-    margin-left: 2rem
+sup
+  color: $active
+  font-size: 1.3rem
+  font-weight: normal
+  top: -2.5rem
+  margin-left: 2rem
 .section
   &-title
     margin: 0
@@ -85,12 +87,12 @@ img
   &__link
     text-decoration: none
     color: #dddddd
-    font-size: 1rem
+    font-size: 1.3rem
     margin-left: 1.57rem
   &--big
     color: $light
     display: block
-    font-size: 2.8rem
+    font-size: 2.9rem
 .nav
   &--hidden
     display: none
@@ -134,10 +136,11 @@ img
   padding-top: 2.78rem
   padding-left: 11%
   &__title
-    font-size: 5rem
+    font-size: 5.8rem
     max-width: 27rem
     margin: 0
     margin-bottom: 2.21rem
+    line-height: 1.1
   &__subtitle
     max-width: 19rem
     font-size: 2rem
@@ -153,6 +156,9 @@ img
     position: absolute
     top: 91px
     z-index: 3
+  .swiper
+    &-button-prev
+      transform: rotate(180deg)
 .video
   display: flex
   margin: auto
@@ -222,6 +228,20 @@ img
     padding: 1rem
     background-color: transparent
 .swiper
+  &-pagination
+    position: relative
+    color: #000000
+    bottom: 2rem
+    &-current
+      font-size: 2rem
+      margin-right: 2rem
+      &::before
+        content: '0'
+    &-total
+      color: #777777
+      margin-left: 1rem
+      &::before
+        content: '0'
   &-slide
     padding-left: 1.5rem
     padding-right: 1rem
@@ -237,7 +257,6 @@ img
         display: none
     &-prev
       left: -2%
-      transform: rotate(180deg)
       background: $light url('../img/next.svg') no-repeat center
     &-next
       right: -2%
@@ -291,20 +310,6 @@ img
       padding-left: 1.5rem
       padding-right: 1.5rem
       padding-bottom: 2rem
-    &-pagination
-      position: relative
-      color: #000000
-      bottom: 2rem
-      &-current
-        font-size: 2rem
-        margin-right: 2rem
-        &::before
-          content: '0'
-      &-total
-        color: #777777
-        margin-left: 1rem
-        &::before
-          content: '0'
     &-button
       &-prev, &-next
         top: calc(50% - 27px - 1.5rem)
@@ -338,14 +343,21 @@ img
   position: relative
   background: #222222 url('../img/footer-bg.jpg') no-repeat center / cover
   color: $light
-  height: 2178px
-
 .auto
   padding: 10rem 0
   padding-left: 11%
   &-wrap
     display: flex
     justify-content: space-between
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 1px
+      bottom: -5rem
+      left: 0
+      background-color: rgba(#444, 0.5)
   &-features
     display: flex
     flex-wrap: wrap
@@ -426,9 +438,182 @@ img
     margin-right: 2.8rem
     color: $secondary
 
+.order
+  padding-left: 11%
+  &-wrap
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+  &-item
+    flex-basis: 22%
+  &__section-heading
+    max-width: 14.14rem
+    line-height: 1.5
+  &__form
+    display: flex
+    flex-direction: column
+.select
+  background-color: transparent
+  color: $light
+  border: 1px solid #444444
+  padding: 1.3rem 1.3rem
+  appearance: none
+  &__discount
+    font-size: 0.7rem
+.input
+  background-color: transparent
+  border: none
+  color: $light
+  border-bottom: 2px solid #444
+  padding: 0.5rem 0
+  &::placeholder
+    color: darken($light, 20%)
+.button
+  background-color: $primary
+  border: none
+  color: $light
+  padding: 0.8rem 0
+  text-transform: uppercase
+  cursor: pointer
+  transition: all 0.2s
+  &:hover
+    background-color: darken($primary, 15%)
+.promo
+  color: $secondary
+  font-size: 0.9rem
+  text-align: center
+  cursor: pointer
+  transition: all 0.2s
+  &:hover
+    color: lighten($secondary, 20%)
+.form
+  &__input, &__select
+    margin-bottom: 2.5rem
+  &__button
+    margin-bottom: 1.5rem
+.price
+  &__new
+    font-size: 4rem
+  &--sup
+    color: $secondary
+    top: -2.5rem
+    margin-left: 1rem
+  &__old
+    color: $active
+    display: block
+    text-decoration: line-through
+    font-size: 1.5rem
+
+.contacts
+  padding-left: 11%
+  padding-top: 10rem
+  padding-bottom: 3rem
+  &-wrap
+    display: flex
+  &-item
+    flex-basis: 25%
+  &-slider
+    flex-basis: 50%
+  .swiper
+    &-slide
+      background: #222222 url('../img/contacts-bg.png') no-repeat center / cover
+      flex-basis: 100%
+      min-height: 190px
+      padding: 0 3rem
+      &__title
+        font-weight: normal
+        font-size: 1.4rem
+        max-width: 20rem
+        line-height: 1.5
+      &__text
+        color: $secondary
+        max-width: 18rem
+    &-button
+      &-prev
+        background: transparent url('../img/icon-prev-contact.svg') no-repeat center
+        padding: 0
+        left: 75%
+        top: 73%
+        transition: all 0.2s
+        &:hover
+          transform: rotate(180deg)
+          background-image: url('../img/icon-next-hover.svg')
+      &-next
+        background: transparent url('../img/icon-prev-contact.svg') no-repeat center
+        padding: 0
+        transform: rotate(180deg)
+        right: 7%
+        top: 73%
+        &:hover
+          transform: none
+          background-image: url('../img/icon-next-hover.svg')
+    &-pagination
+      position: absolute
+      top: 2.5rem
+      left: 30%
+      color: $secondary
+      &-current
+        color: $light
+.requisites
+  &__title
+    margin: 0
+    font-weight: normal
+    font-size: 1.4rem
+    margin-bottom: 2rem
+  &__text
+    line-height: 2
+    color: $secondary
+    font-size: 1.2rem
+  &__link
+    display: block
+    color: $secondary
+    text-decoration: none
+    font-size: 1.2rem
+    margin-bottom: 1.2rem
+    transition: all 0.2s
+    &:hover
+      color: $active
+      text-decoration: underline
+.social
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-top: 8rem
+  &__links
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__link
+    border: 1px solid $secondary
+    color: $secondary
+    border-radius: 50px
+    padding: 1rem
+    margin-right: 1rem
+    cursor: pointer
+    width: 53px
+    height: 53px
+    transition: all 0.2s
+    display: flex
+    justify-content: center
+    align-items: center
+    &:hover
+      color: $active
+      border-color: $active
+  &__copyright
+    color: #444444
+    margin-right: 6%
+.flaticon
+  &-vk, &-null, &-whatsapp, &-mail
+    &::before
+      margin-left: -1%
+  //   color: $secondary
+
 @media screen and ( max-width: 1200px )
   html
     font-size: 12px
+  .contacts
+    &-slider
+      flex-basis: 52%
 
 @media screen and ( max-width: 992px )
   .logo
@@ -494,6 +679,44 @@ img
       margin-bottom: 2rem
     &__text
       width: auto
+  .auto
+    &-settings
+      flex-direction: row
+    &-wrap
+      flex-direction: column
+    &-features
+      margin-top: 2rem
+  .feature
+    flex-basis: 50%
+    margin-bottom: 4rem
+  .icons
+    max-width: 18rem
+  .tune
+    margin-right: 5rem
+  .order
+    &-wrap
+      flex-wrap: wrap
+    &__section-heading
+      flex-basis: 100%
+      margin: auto
+      max-width: none
+      text-align: center
+      margin-bottom: 3rem
+    &__form, &__price
+      flex-basis: 40%
+  .contacts
+    &-item
+      order: 4
+      margin: auto
+      text-align: center
+    &-wrap
+      flex-wrap: wrap
+    &-slider
+      flex-basis: 535px
+      margin-bottom: 3rem
+  .swiper
+    &-slide
+      max-width: 535px
 @media screen and ( max-width: 767px )
   .header
     padding-top: 3rem
@@ -559,7 +782,44 @@ img
     &__info
       padding-left: 0
       margin-left: 0
-
+  .auto
+    padding-left: 0
+    &-settings
+      flex-direction: column
+      justify-content: center
+  .tune
+    align-self: center
+    margin-right: 0
+  .feature
+    text-align: center
+    &__text, &__icons
+      margin-left: auto
+      margin-right: auto
+  .complect
+    margin-left: auto
+    margin-right: auto
+  .order
+    padding-left: 0
+  .contacts
+    padding-left: 0
+    &-item
+      flex-basis: 50%
+@media screen and ( max-width: 576px )
+  .contacts
+    &-slider
+      display: none
+    &-item
+      align-self: flex-start
+      margin: 0
+  .social
+    flex-wrap: wrap
+    margin-top: 3rem
+    &__links
+      flex-basis: 100%
+      justify-content: center
+      margin-bottom: 2rem
+    &__copyright
+      margin: auto
 @media screen and ( max-width: 480px )
   .person
     flex-basis: 100%
@@ -572,3 +832,25 @@ img
       &-button
         &-prev, &-next
           top: calc(50% - 20px)
+  .feature
+    flex-basis: 100%
+  .order
+    &__form, &__price
+      flex-basis: 100%
+    &__form
+      order: 4
+    &__price
+      margin-bottom: 2rem
+      text-align: center
+  .price
+    &--sup
+      margin-left: 0rem
+  .contacts
+    &-wrap
+      flex-wrap: wrap
+    &-item
+      flex-basis: 100%
+      margin-bottom: 2rem
+  .requisites
+    &__title
+      margin-bottom: 1rem
