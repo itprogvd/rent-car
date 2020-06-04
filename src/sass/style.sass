@@ -70,6 +70,26 @@ sup
   background: #000 url('../img/main-bg.jpg') no-repeat center
   background-size: cover
   color: $light
+  &__scroll-up
+    text-decoration: none
+    color: $light
+    position: fixed
+    right: 0
+    bottom: 0
+    margin: 3rem 4rem
+    transform: rotate(180deg)
+    border: 1px solid $primary
+    border-radius: 50%
+    padding: 1.3rem
+    background-color: $primary
+    z-index: 9999
+    transition: all 0.2s
+    i:before
+      margin-left: 0
+    &:hover
+      background-color: transparent
+      color: $primary
+      border: 1px solid $primary
   &::before
     content: ''
     position: absolute
@@ -98,7 +118,6 @@ sup
   &--hidden
     display: none
   &__item
-    color: $light
     text-decoration: none
     color: #dddddd
     font-size: 1.3rem
@@ -166,6 +185,8 @@ sup
   min-height: 36.142rem
   max-width: 69rem
   position: relative
+  a
+    position: relative
   &s
     display: flex
     justify-content: space-between
@@ -182,6 +203,8 @@ sup
       margin-bottom: 7rem
     &__all
       font-size: 1.35rem
+      text-decoration: none
+      color: #000000
       img
         margin-left: 1.2rem
     &-wrap
@@ -604,6 +627,7 @@ sup
     border: 1px solid $secondary
     color: $secondary
     border-radius: 50px
+    text-decoration: none
     padding: 1rem
     margin-right: 1rem
     cursor: pointer
@@ -638,6 +662,12 @@ sup
       flex-basis: 52%
 
 @media screen and ( max-width: 992px )
+  .header
+    &__scroll-up
+      &:hover
+        background-color: $primary
+        color: $light
+        border-color: $primary
   .logo
     &__link
       margin-left: 0
@@ -648,11 +678,28 @@ sup
   .nav
     &__item:not(:last-child)
       margin-right: 1rem
+    &__item
+      border: 0
+      &:hover
+        color: #ddd
+        border: 0
   .hero
     &__title
       font-size: 4.2rem
+  .play
+    &:hover
+      border: none
+      padding: 0
+      background-color: $light
   .video
     min-height: auto
+    &-item
+      &:hover
+        .video-item__images
+          &::before
+            display: none
+        .video-item__text
+          color: #000
     &s
       flex-wrap: wrap
       &__info
@@ -740,13 +787,43 @@ sup
     &-slider
       flex-basis: 535px
       margin-bottom: 3rem
+  .requisites
+    &__link
+      &:hover
+        color: $secondary
+        text-decoration: none
+  .button
+    &:hover
+      background-color: $primary
+  .promo
+    &:hover
+      color: $secondary
   .swiper
     &-slide
       max-width: 535px
+  .contacts
+    .swiper
+      &-button
+        &-prev
+          &:hover
+            transform: none
+            background-image: url('../img/icon-prev-contact.svg')
+        &-next
+          &:hover
+            transform: rotate(180deg)
+            background-image: url('../img/icon-prev-contact.svg')
+  .social
+    &__link
+      &:hover
+        color: $secondary
+        border-color: $secondary
 @media screen and ( max-width: 767px )
   .header
     padding-top: 3rem
     height: 100vh
+    &__scroll-up
+      margin: 2rem 3rem
+      padding: 0.9rem
   .menu
     flex-direction: column
     align-items: flex-start
@@ -758,8 +835,6 @@ sup
       color: $light
       transition: all 0.3s
       font-size: 1.5rem
-      &:hover
-        border-bottom: 0
   .burger
     display: flex
     align-self: flex-end

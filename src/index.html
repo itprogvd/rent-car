@@ -6,10 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Аренда авто</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -20,7 +22,7 @@
         <div class="menu">
           <div class="logo menu__logo wow fadeInLeft">
             <img src="img/logo.png" alt="Ставрополье" class="logo__image">
-            <a class="logo__link" href="/repair-design">
+            <a class="logo__link" href="/rent-car">
               <span class="logo--big">Ставрополье</span>
               на ладони
             </a>
@@ -45,6 +47,7 @@
           <div class="hero__subtitle">Ставропольский край как на ладони</div>
         </div>
       </div>
+      <a href="#" class="header__scroll-up"><i class="flaticon-down-arrow"></i></a>
     </header>
 
     <section class="section beauties">
@@ -55,17 +58,19 @@
         </div>
 
         <div class="video beauties__video">
-          <img src="img/beuties-bg.png" alt="beuties__video" class="video-bg">
-          <img src="img/play.svg" alt="play" class="play">
+          <a data-fancybox href="https://www.youtube.com/watch?v=BkGFhBypWrc">
+            <img src="img/beuties-bg.png" alt="beuties__video" class="video-bg">
+            <img src="img/play.svg" alt="play" class="play"></a>
+
         </div>
 
         <div class="beauties__videos videos">
           <div class="videos__info">
             <p class="videos__text">Интересные места Ставропольского края <span class="text--primary">эксклюзивно для
                 вас!</span></p>
-            <span class="videos__all">Все видео
+            <a href="#" class="videos__all">Все видео
               <img src="img/icon-video.svg" alt="video">
-            </span>
+            </a>
           </div>
           <div class="swiper-container swiper-no-swiping videos-wrap">
             <!-- Additional required wrapper -->
@@ -74,8 +79,10 @@
               <div class="swiper-slide">
                 <div class="video-item">
                   <div class="video-item__images">
-                    <img src="img/video-2.jpg" alt="video" class="video--bg">
-                    <img src="img/play.svg" alt="play" class="play">
+                    <a data-fancybox href="https://www.youtube.com/watch?v=47umTmxq2-s">
+                      <img src="img/video-1.jpg" alt="video" class="video--bg">
+                      <img src="img/play.svg" alt="play" class="play">
+                    </a>
                   </div>
                   <p class="video-item__text">Цейский заповедник близ Северной Осетии</p>
                 </div>
@@ -83,8 +90,21 @@
               <div class="swiper-slide">
                 <div class="video-item">
                   <div class="video-item__images">
-                    <img src="img/video-2.jpg" alt="video" class="video--bg">
-                    <img src="img/play.svg" alt="play" class="play">
+                    <a data-fancybox href="https://www.youtube.com/watch?v=rxzFcotn8Ew">
+                      <img src="img/video-2.jpg" alt="video" class="video--bg">
+                      <img src="img/play.svg" alt="play" class="play">
+                    </a>
+                  </div>
+                  <p class="video-item__text">Незабываемый маршрут в Ингушский заповедник: Боевые башни Эрзи</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="video-item">
+                  <div class="video-item__images">
+                    <a data-fancybox href="https://www.youtube.com/watch?v=47umTmxq2-s">
+                      <img src="img/video-1.jpg" alt="video" class="video--bg">
+                      <img src="img/play.svg" alt="play" class="play">
+                    </a>
                   </div>
                   <p class="video-item__text">Цейский заповедник близ Северной Осетии</p>
                 </div>
@@ -92,10 +112,12 @@
               <div class="swiper-slide">
                 <div class="video-item">
                   <div class="video-item__images">
-                    <img src="img/video-2.jpg" alt="video" class="video--bg">
-                    <img src="img/play.svg" alt="play" class="play">
+                    <a data-fancybox href="https://www.youtube.com/watch?v=rxzFcotn8Ew">
+                      <img src="img/video-2.jpg" alt="video" class="video--bg">
+                      <img src="img/play.svg" alt="play" class="play">
+                    </a>
                   </div>
-                  <p class="video-item__text">Цейский заповедник близ Северной Осетии</p>
+                  <p class="video-item__text">Незабываемый маршрут в Ингушский заповедник: Боевые башни Эрзи</p>
                 </div>
               </div>
 
@@ -333,18 +355,18 @@
         </div>
         <div class="social">
           <div class="social__links">
-            <span class="social__link">
+            <a href="#" class="social__link">
               <i class="flaticon-vk"></i>
-            </span>
-            <span class="social__link">
+            </a>
+            <a href="#" class="social__link">
               <i class="flaticon-null"></i>
-            </span>
-            <span class="social__link">
+            </a>
+            <a href="#" class="social__link">
               <i class="flaticon-whatsapp"></i>
-            </span>
-            <span class="social__link">
+            </a>
+            <a href="mailto:pupkinvvv@example.ru" class="social__link">
               <i class="flaticon-mail"></i>
-            </span>
+            </a>
           </div>
           <div class="social__copyright">&copy; 2020 Все права защищены</div>
         </div>
@@ -354,6 +376,7 @@
   <script src="js/jquery.min.js"></script>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   <script src="js/jquery.selectric.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 
