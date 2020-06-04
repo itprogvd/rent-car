@@ -48,6 +48,13 @@ sup
   font-weight: normal
   top: -2.5rem
   margin-left: 2.5rem
+div.invalid
+  color: tomato
+  position: absolute
+  bottom: 6.4rem
+  font-size: 0.9rem
+input.invalid
+  border-bottom: 1px solid tomato
 .section
   &-title
     margin: 0
@@ -70,6 +77,8 @@ sup
   background: #000 url('../img/main-bg.jpg') no-repeat center
   background-size: cover
   color: $light
+  &-thanks
+    height: 100vh
   &__scroll-up
     text-decoration: none
     color: $light
@@ -167,18 +176,25 @@ sup
     color: #dddddd
 
 .beauties
-  // background-color: #f7f4f2
+  background-color: #f7f4f2
   padding-left: 11%
   padding-bottom: 10rem
-  margin-top: -20rem
+  padding-top: 20rem
   position: relative
+  &-wrap
+    position: absolute
+    top: -15rem
   &__section-heading
     position: absolute
     top: 91px
     z-index: 3
   .swiper
-    &-button-prev
-      transform: rotate(180deg)
+    &-button
+      &-prev, &-next
+        top: calc(50% - 27px - 12px)
+        background-color: #f7f4f2
+      &-prev
+        transform: rotate(180deg)
 .video
   display: flex
   margin: auto
@@ -492,14 +508,92 @@ sup
   &__form
     display: flex
     flex-direction: column
+    position: relative
 .select
   background-color: transparent
   color: $light
   border: 1px solid #444444
-  padding: 1.3rem 1.3rem
+  padding: 0.5rem 1rem
   appearance: none
+  position: relative
+  display: block
+  font-size: 1.3rem
+  border-radius: 3px
   &__discount
     font-size: 0.7rem
+.new-select
+  position: relative
+  padding: 10px 15px
+  cursor: pointer
+  user-select: none
+  display: flex
+  align-items: center
+  &::before
+    content: '20%'
+    position: absolute
+    color: $secondary
+    right: 6rem
+    font-size: 0.9rem
+  &:after
+    content: ''
+    display: block
+    width: 15px
+    height: 8px
+    position: absolute
+    right: 0px
+    top: 15px
+    background: url('../img/select-arrow.svg') no-repeat right center / cover
+    opacity: 0.6
+    -webkit-transition: all .27s ease-in-out
+    -o-transition: all .27s ease-in-out
+    transition: all .27s ease-in-out
+    -webkit-transform: rotate(0deg)
+    -ms-transform: rotate(0deg)
+    -o-transform: rotate(0deg)
+    transform: rotate(0deg)
+  &.on
+    &:after
+      -webkit-transform: rotate(180deg)
+      -ms-transform: rotate(180deg)
+      -o-transform: rotate(180deg)
+      transform: rotate(180deg)
+.new-select__list
+  position: absolute
+  top: 45px
+  left: 0
+  cursor: pointer
+  width: 100%
+  z-index: 2
+  background: #222
+  user-select: none
+  &.on
+    display: block
+.new-select__item
+  display: flex
+  align-items: center
+  &::before
+    position: absolute
+    color: $secondary
+    right: 7rem
+    font-size: 0.9rem
+  &:nth-child(1)
+    &::before
+      content: '-20%'
+  &:nth-child(2)
+    &::before
+      content: '-20%'
+  &:nth-child(3)
+    &::before
+      content: '-20%'
+  &:nth-child(4)
+    &::before
+      content: '-20%'
+  span
+    display: block
+    padding: 10px 15px
+    &:hover
+      color: darken($light, 20%)
+
 .input
   background-color: transparent
   border: none
@@ -529,6 +623,8 @@ sup
 .form
   &__input, &__select
     margin-bottom: 2.5rem
+    margin-top: 2.5rem
+    position: relative
   &__button
     margin-bottom: 1.5rem
 .price
@@ -652,6 +748,11 @@ sup
 @media screen and ( max-width: 1200px )
   html
     font-size: 12px
+  .beauties
+    .swiper
+      &-button
+        &-prev, &-next
+          top: calc(50% - 42px)
   .about
     .swiper
       &-slide
@@ -660,6 +761,13 @@ sup
   .contacts
     &-slider
       flex-basis: 52%
+
+@media screen and ( max-width: 1096px )
+  .beauties
+    .swiper
+      &-button
+        &-prev, &-next
+          top: calc(50% - 35px)
 
 @media screen and ( max-width: 992px )
   .header
@@ -707,7 +815,7 @@ sup
         margin-bottom: 2rem
         flex-basis: 100%
       &-wrap
-        flex-basis: 100%
+        flex-basis: 84%
       &__text
         margin: auto
         margin-bottom: 2rem
@@ -853,10 +961,14 @@ sup
       margin-bottom: 2rem
   .beauties
     padding-left: 0
-    padding-top: 3rem
+    padding-top: 20rem
     // margin-top: 0
     &__videos
       padding-top: 3rem
+    .swiper
+      &-button
+        &-prev, &-next
+          top: calc(50% - 27px)
   .video
     &-item
       margin: auto
@@ -926,6 +1038,8 @@ sup
     &__copyright
       margin: auto
 @media screen and ( max-width: 480px )
+  .beauties
+    padding-top: 10rem
   .person
     flex-basis: 100%
   .swiper

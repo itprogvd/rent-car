@@ -52,16 +52,18 @@
 
     <section class="section beauties">
       <div class="container">
-        <div class="section-heading beauties__section-heading">
-          <h2 class="section-title">Красоты Ставрополья</h2>
-          <div class="section-subtitle">Надежный автомобиль — залог лучших впечатлений!</div>
-        </div>
+        <div class="beauties-wrap">
+          <div class="section-heading beauties__section-heading">
+            <h2 class="section-title">Красоты Ставрополья</h2>
+            <div class="section-subtitle">Надежный автомобиль — залог лучших впечатлений!</div>
+          </div>
 
-        <div class="video beauties__video">
-          <a data-fancybox href="https://www.youtube.com/watch?v=BkGFhBypWrc">
-            <img src="img/beuties-bg.png" alt="beuties__video" class="video-bg">
-            <img src="img/play.svg" alt="play" class="play"></a>
+          <div class="video beauties__video">
+            <a data-fancybox href="https://www.youtube.com/watch?v=BkGFhBypWrc">
+              <img src="img/beuties-bg.png" alt="beuties__video" class="video-bg">
+              <img src="img/play.svg" alt="play" class="play"></a>
 
+          </div>
         </div>
 
         <div class="beauties__videos videos">
@@ -279,18 +281,18 @@
           <div class="section-heading order__section-heading order-item">
             <h2 class="section-title order__section-title">Заказать автомобиль в аренду</h2>
           </div>
-          <form action="#" class="form order__form order-item">
+          <form action="send.php" method="POST" class="form order__form order-item">
             <select name="days" id="days" class="select form__select">
-              <option value="tenDays" class="option select__option">10 дней <span class="select__discount">-20%</span>
+              <option disabled value="tenDays" class="option select__option">10 дней
+              <option value="tenDays" class="option select__option">10 дней
               </option>
-              <option value="fiveDays" class="option select__option">5 дней <span class="select__discount">-30%</span>
+              <option value="fiveDays" class="option select__option">5 дней
               </option>
-              <option value="threeDays" class="option select__option">3 дня <span class="select__discount">-50%</span>
+              <option value="threeDays" class="option select__option">3 дня
               </option>
-              <option value="fourteenDays" class="option select__option">14 дней <span
-                  class="select__discount">-10%</span></option>
+              <option value="fourteenDays" class="option select__option">14 дней </option>
             </select>
-            <input type="tel" name="tel" class="input form__input" placeholder="Ваш телефон">
+            <input type="tel" name="phone" class="input form__input" placeholder="Ваш телефон">
             <button type="submit" class="button form__button">Заказать</button>
             <span class="promo form__promo">А у меня есть промокод!</span>
           </form>
@@ -377,6 +379,8 @@
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   <script src="js/jquery.selectric.min.js"></script>
   <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/jquery.mask.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 
