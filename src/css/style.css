@@ -511,10 +511,10 @@ input.invalid {
     justify-content: space-between;
     align-items: flex-start; }
   .order-item {
-    flex-basis: 22%; }
+    flex-basis: 28%; }
   .order__section-heading {
     max-width: 14.14rem;
-    line-height: 1.5; }
+    line-height: 1.4; }
   .order__form {
     display: flex;
     flex-direction: column;
@@ -524,36 +524,35 @@ input.invalid {
   background-color: transparent;
   color: #ffffff;
   border: 1px solid #444444;
-  padding: 0.5rem 1rem;
-  appearance: none;
-  position: relative;
+  padding: 1.5rem 2rem;
   display: block;
-  font-size: 1.3rem;
-  border-radius: 3px; }
+  font-size: 1.7rem;
+  border-radius: 3px;
+  margin-bottom: 1.5rem; }
   .select__discount {
     font-size: 0.7rem; }
 
 .new-select {
   position: relative;
-  padding: 10px 15px;
+  padding: 10px 7px;
   cursor: pointer;
   user-select: none;
   display: flex;
   align-items: center; }
   .new-select::before {
-    content: '20%';
+    content: '-20%';
     position: absolute;
     color: #777777;
-    right: 6rem;
-    font-size: 0.9rem; }
+    right: 20%;
+    font-size: 1.2rem; }
   .new-select:after {
     content: '';
     display: block;
     width: 15px;
     height: 8px;
     position: absolute;
-    right: 0px;
-    top: 15px;
+    right: -10px;
+    top: 18px;
     background: url("../img/select-arrow.svg") no-repeat right center/cover;
     opacity: 0.6;
     -webkit-transition: all .27s ease-in-out;
@@ -583,7 +582,8 @@ input.invalid {
 
 .new-select__item {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  border: 1px solid #444; }
   .new-select__item::before {
     position: absolute;
     color: #777777;
@@ -608,7 +608,8 @@ input.invalid {
   border: none;
   color: #ffffff;
   border-bottom: 2px solid #444;
-  padding: 0.5rem 0; }
+  padding: 0.6rem 0;
+  font-size: 1.33rem; }
   .input::placeholder {
     color: #cccccc; }
 
@@ -616,10 +617,11 @@ input.invalid {
   background-color: #ff6600;
   border: none;
   color: #ffffff;
-  padding: 0.8rem 0;
+  padding: 1.3rem 0;
   text-transform: uppercase;
   cursor: pointer;
-  transition: all 0.2s; }
+  transition: all 0.2s;
+  font-size: 1.3rem; }
   .button:hover {
     background-color: #b34700; }
 
@@ -628,7 +630,8 @@ input.invalid {
   font-size: 0.9rem;
   text-align: center;
   cursor: pointer;
-  transition: all 0.2s; }
+  transition: all 0.2s;
+  font-size: 1.1rem; }
   .promo:hover {
     color: #aaaaaa; }
 
@@ -637,22 +640,25 @@ input.invalid {
   margin-top: 2.5rem;
   position: relative; }
 
+.form__input {
+  margin-bottom: 3.4rem; }
+
 .form__button {
   margin-bottom: 1.5rem; }
 
 .price__new {
-  font-size: 4rem; }
+  font-size: 6rem; }
 
 .price--sup {
   color: #777777;
-  top: -2.5rem;
-  margin-left: 1rem; }
+  top: -2.9rem;
+  margin-left: -1%; }
 
 .price__old {
   color: #17bebb;
   display: block;
   text-decoration: line-through;
-  font-size: 1.5rem; }
+  font-size: 1.9rem; }
 
 .contacts {
   padding-left: 11%;
@@ -770,7 +776,11 @@ input.invalid {
 
 @media screen and (max-width: 1096px) {
   .beauties .swiper-button-prev, .beauties .swiper-button-next {
-    top: calc(50% - 35px); } }
+    top: calc(50% - 35px); }
+  .price__new {
+    font-size: 5rem; }
+  .price--sup {
+    font-size: 1.3rem; } }
 
 @media screen and (max-width: 992px) {
   .header__scroll-up:hover {
@@ -968,7 +978,8 @@ input.invalid {
     padding-left: 0;
     margin-left: 0; }
   .auto {
-    padding-left: 0; }
+    padding-left: 0;
+    padding-top: 3rem; }
     .auto-settings {
       flex-direction: column;
       justify-content: center; }
@@ -991,11 +1002,20 @@ input.invalid {
       flex-basis: 50%; } }
 
 @media screen and (max-width: 576px) {
-  .contacts-slider {
-    display: none; }
-  .contacts-item {
-    align-self: flex-start;
-    margin: 0; }
+  .contacts {
+    padding-top: 5rem; }
+    .contacts-slider {
+      display: none; }
+    .contacts-item {
+      align-self: flex-start;
+      margin: 0; }
+  .order__form, .order__price {
+    flex-basis: 100%; }
+  .order__form {
+    order: 4; }
+  .order__price {
+    margin-bottom: 2rem;
+    text-align: center; }
   .social {
     flex-wrap: wrap;
     margin-top: 3rem; }
@@ -1024,13 +1044,6 @@ input.invalid {
     font-size: 1.2rem; }
   .feature {
     flex-basis: 100%; }
-  .order__form, .order__price {
-    flex-basis: 100%; }
-  .order__form {
-    order: 4; }
-  .order__price {
-    margin-bottom: 2rem;
-    text-align: center; }
   .price--sup {
     margin-left: 0rem; }
   .contacts-wrap {

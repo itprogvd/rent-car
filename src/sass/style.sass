@@ -501,10 +501,10 @@ input.invalid
     justify-content: space-between
     align-items: flex-start
   &-item
-    flex-basis: 22%
+    flex-basis: 28%
   &__section-heading
     max-width: 14.14rem
-    line-height: 1.5
+    line-height: 1.4
   &__form
     display: flex
     flex-direction: column
@@ -513,35 +513,34 @@ input.invalid
   background-color: transparent
   color: $light
   border: 1px solid #444444
-  padding: 0.5rem 1rem
-  appearance: none
-  position: relative
+  padding: 1.5rem 2rem
   display: block
-  font-size: 1.3rem
+  font-size: 1.7rem
   border-radius: 3px
+  margin-bottom: 1.5rem
   &__discount
     font-size: 0.7rem
 .new-select
   position: relative
-  padding: 10px 15px
+  padding: 10px 7px
   cursor: pointer
   user-select: none
   display: flex
   align-items: center
   &::before
-    content: '20%'
+    content: '-20%'
     position: absolute
     color: $secondary
-    right: 6rem
-    font-size: 0.9rem
+    right: 20%
+    font-size: 1.2rem
   &:after
     content: ''
     display: block
     width: 15px
     height: 8px
     position: absolute
-    right: 0px
-    top: 15px
+    right: -10px
+    top: 18px
     background: url('../img/select-arrow.svg') no-repeat right center / cover
     opacity: 0.6
     -webkit-transition: all .27s ease-in-out
@@ -571,6 +570,7 @@ input.invalid
 .new-select__item
   display: flex
   align-items: center
+  border: 1px solid #444
   &::before
     position: absolute
     color: $secondary
@@ -599,17 +599,19 @@ input.invalid
   border: none
   color: $light
   border-bottom: 2px solid #444
-  padding: 0.5rem 0
+  padding: 0.6rem 0
+  font-size: 1.33rem
   &::placeholder
     color: darken($light, 20%)
 .button
   background-color: $primary
   border: none
   color: $light
-  padding: 0.8rem 0
+  padding: 1.3rem 0
   text-transform: uppercase
   cursor: pointer
   transition: all 0.2s
+  font-size: 1.3rem
   &:hover
     background-color: darken($primary, 15%)
 .promo
@@ -618,6 +620,7 @@ input.invalid
   text-align: center
   cursor: pointer
   transition: all 0.2s
+  font-size: 1.1rem
   &:hover
     color: lighten($secondary, 20%)
 .form
@@ -625,20 +628,22 @@ input.invalid
     margin-bottom: 2.5rem
     margin-top: 2.5rem
     position: relative
+  &__input
+    margin-bottom: 3.4rem
   &__button
     margin-bottom: 1.5rem
 .price
   &__new
-    font-size: 4rem
+    font-size: 6rem
   &--sup
     color: $secondary
-    top: -2.5rem
-    margin-left: 1rem
+    top: -2.9rem
+    margin-left: -1%
   &__old
     color: $active
     display: block
     text-decoration: line-through
-    font-size: 1.5rem
+    font-size: 1.9rem
 
 .contacts
   padding-left: 11%
@@ -768,6 +773,11 @@ input.invalid
       &-button
         &-prev, &-next
           top: calc(50% - 35px)
+  .price
+    &__new
+      font-size: 5rem
+    &--sup
+      font-size: 1.3rem
 
 @media screen and ( max-width: 992px )
   .header
@@ -1001,6 +1011,7 @@ input.invalid
       margin-left: 0
   .auto
     padding-left: 0
+    padding-top: 3rem
     &-settings
       flex-direction: column
       justify-content: center
@@ -1023,11 +1034,20 @@ input.invalid
       flex-basis: 50%
 @media screen and ( max-width: 576px )
   .contacts
+    padding-top: 5rem
     &-slider
       display: none
     &-item
       align-self: flex-start
       margin: 0
+  .order
+    &__form, &__price
+      flex-basis: 100%
+    &__form
+      order: 4
+    &__price
+      margin-bottom: 2rem
+      text-align: center
   .social
     flex-wrap: wrap
     margin-top: 3rem
@@ -1060,14 +1080,6 @@ input.invalid
       font-size: 1.2rem
   .feature
     flex-basis: 100%
-  .order
-    &__form, &__price
-      flex-basis: 100%
-    &__form
-      order: 4
-    &__price
-      margin-bottom: 2rem
-      text-align: center
   .price
     &--sup
       margin-left: 0rem

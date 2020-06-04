@@ -71,7 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
           $('select').val(chooseItem).attr('selected', 'selected');
           selectHead.text($(this).find('span').text());
-          selectHead.text(window.getComputedStyle($('new-select__item'), ':before').content);
 
           selectList.slideUp(duration);
           selectHead.removeClass('on');
@@ -152,6 +151,19 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollTop: 0
       }, 500);
       return false;
+    });
+  });
+
+  $(function () {
+    document.querySelectorAll('.nav__item').forEach((item) => {
+      $(item).click(function () {
+        let elementClick = $(item).attr("href");
+        let destination = $(elementClick).offset().top;
+        $('html, body').animate({
+          scrollTop: destination
+        }, 500);
+        return false;
+      });
     });
   });
 
