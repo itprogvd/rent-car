@@ -655,20 +655,25 @@ input.invalid
     flex-basis: 25%
   &-slider
     flex-basis: 50%
+    position: relative
   .swiper
     &-slide
-      background: #222222 url('../img/contacts-bg.png') no-repeat center / cover
+      // background: #222222 url('../img/contacts-bg.png') no-repeat center / cover
       flex-basis: 100%
       min-height: 190px
-      padding: 0 3rem
+      padding: 0 0
+      &__img
+        position: absolute
       &__title
         font-weight: normal
         font-size: 1.4rem
-        max-width: 20rem
+        max-width: 25rem
         line-height: 1.5
       &__text
         color: $secondary
         max-width: 18rem
+      &__title, &__text
+        padding-left: 3rem
     &-button
       &-prev
         background: transparent url('../img/icon-prev-contact.svg') no-repeat center
@@ -900,6 +905,7 @@ input.invalid
       order: 4
       margin: auto
       text-align: center
+      flex-basis: 50%
     &-wrap
       flex-wrap: wrap
     &-slider
