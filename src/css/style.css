@@ -56,7 +56,7 @@ sup {
 div.invalid {
   color: tomato;
   position: absolute;
-  bottom: 6.4rem;
+  bottom: 8.5rem;
   font-size: 0.9rem; }
 
 input.invalid {
@@ -674,9 +674,8 @@ input.invalid {
   .contacts .swiper-slide {
     flex-basis: 100%;
     min-height: 190px;
-    padding: 0 0; }
-    .contacts .swiper-slide__img {
-      position: absolute; }
+    padding: 0 0;
+    position: relative; }
     .contacts .swiper-slide__title {
       font-weight: normal;
       font-size: 1.4rem;
@@ -687,11 +686,20 @@ input.invalid {
       max-width: 18rem; }
     .contacts .swiper-slide__title, .contacts .swiper-slide__text {
       padding-left: 3rem; }
+    .contacts .swiper-slide__img {
+      position: absolute; }
+  .contacts .swiper-pagination {
+    max-width: 100%;
+    padding-left: 3rem; }
+    .contacts .swiper-pagination-current {
+      margin-left: 2rem; }
+    .contacts .swiper-pagination-total {
+      margin-right: 1rem; }
   .contacts .swiper-button-prev {
     background: transparent url("../img/icon-prev-contact.svg") no-repeat center;
     padding: 0;
     left: 75%;
-    top: 73%;
+    top: 68%;
     transition: all 0.2s; }
     .contacts .swiper-button-prev:hover {
       transform: rotate(180deg);
@@ -701,7 +709,7 @@ input.invalid {
     padding: 0;
     transform: rotate(180deg);
     right: 7%;
-    top: 73%; }
+    top: 68%; }
     .contacts .swiper-button-next:hover {
       transform: none;
       background-image: url("../img/icon-next-hover.svg"); }
@@ -768,6 +776,14 @@ input.invalid {
 .flaticon-vk::before, .flaticon-null::before, .flaticon-whatsapp::before, .flaticon-mail::before {
   margin-left: -1%; }
 
+@media screen and (min-width: 1400px) {
+  .contacts .swiper-pagination {
+    padding-right: 3rem; }
+  .contacts .swiper-button-prev {
+    left: 67%; }
+  .contacts .swiper-button-next {
+    right: 18%; } }
+
 @media screen and (max-width: 1200px) {
   html {
     font-size: 12px; }
@@ -776,7 +792,15 @@ input.invalid {
   .about .swiper-slide img {
     max-width: 100%; }
   .contacts-slider {
-    flex-basis: 52%; } }
+    flex-basis: 52%; }
+  .contacts .swiper-pagination {
+    padding-left: 0; }
+    .contacts .swiper-pagination-current {
+      font-size: 2rem;
+      margin-right: -2rem;
+      margin-left: 1rem; }
+  .contacts .swiper-button-prev, .contacts .swiper-button-next {
+    top: 60%; } }
 
 @media screen and (max-width: 1096px) {
   .beauties .swiper-button-prev, .beauties .swiper-button-next {
@@ -909,6 +933,8 @@ input.invalid {
     color: #777777; }
   .swiper-slide {
     max-width: 535px; }
+  .contacts .swiper-slide__text {
+    margin-bottom: 0; }
   .contacts .swiper-button-prev:hover {
     transform: none;
     background-image: url("../img/icon-prev-contact.svg"); }

@@ -135,12 +135,12 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     pagination: {
       el: '.swiper-pagination',
-      type: 'fraction'
-    },
-    renderFraction: function (currentClass, totalClass) {
-      return '<span class="' + totalClass + '"></span>' +
-        ' of ' +
-        '<span class="' + currentClass + '"></span>';
+      type: 'fraction',
+      renderFraction: function (currentClass, totalClass) {
+        return '<span class="' + totalClass + '"></span>' +
+          ' / ' +
+          '<span class="' + currentClass + '"></span>';
+      },
     },
     slidesPerView: 1
   });
