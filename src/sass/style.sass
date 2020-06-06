@@ -112,8 +112,8 @@ input.invalid
   display: flex
   justify-content: space-between
   align-items: center
-  margin-left: -5rem
-  margin-right: -5rem
+  margin-left: 5rem
+  margin-right: 5rem
 .logo
   display: flex
   &__link
@@ -191,6 +191,7 @@ input.invalid
   &__section-heading
     position: absolute
     top: 91px
+    left: -11%
     z-index: 3
   .swiper
     &-button
@@ -788,6 +789,8 @@ input.invalid
   html
     font-size: 12px
   .beauties
+    &__section-heading
+      left: -16%
     .swiper
       &-button
         &-prev, &-next
@@ -830,9 +833,6 @@ input.invalid
         background-color: $primary
         color: $light
         border-color: $primary
-  .menu
-    margin-left: 0
-    margin-right: 0
   .logo
     &__link
       margin-left: 0
@@ -878,6 +878,8 @@ input.invalid
         margin-bottom: 2rem
   .beauties
     padding-bottom: 2rem
+    &__section-heading
+      left: -5%
     &-wrap
       left: 0.2rem
       left: 50%
@@ -1005,6 +1007,8 @@ input.invalid
   .nav
     order: 3
     margin-top: 3.5rem
+    position: absolute
+    top: 2rem
     &__item
       display: block
       color: $light
@@ -1016,6 +1020,7 @@ input.invalid
     margin-top: -3rem
   .hero
     padding-left: 0
+    margin-top: 15rem
     &__title
       font-size: 3rem
       line-height: normal
@@ -1124,6 +1129,9 @@ input.invalid
     &__copyright
       margin: auto
 @media screen and ( max-width: 480px )
+  .menu
+    margin-left: 2rem
+    margin-right: 2rem
   .person
     flex-basis: 100%
   .swiper

@@ -117,8 +117,8 @@ input.invalid {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: -5rem;
-  margin-right: -5rem; }
+  margin-left: 5rem;
+  margin-right: 5rem; }
 
 .logo {
   display: flex; }
@@ -197,6 +197,7 @@ input.invalid {
   .beauties__section-heading {
     position: absolute;
     top: 91px;
+    left: -11%;
     z-index: 3; }
   .beauties .swiper-button-prev, .beauties .swiper-button-next {
     top: calc(50% - 27px - 12px);
@@ -790,6 +791,8 @@ input.invalid {
 @media screen and (max-width: 1200px) {
   html {
     font-size: 12px; }
+  .beauties__section-heading {
+    left: -16%; }
   .beauties .swiper-button-prev, .beauties .swiper-button-next {
     top: calc(50% - 42px); }
   .about .swiper-slide img {
@@ -818,9 +821,6 @@ input.invalid {
     background-color: #ff6600;
     color: #ffffff;
     border-color: #ff6600; }
-  .menu {
-    margin-left: 0;
-    margin-right: 0; }
   .logo__link {
     margin-left: 0; }
   .logo__image {
@@ -859,6 +859,8 @@ input.invalid {
         margin-bottom: 2rem; }
   .beauties {
     padding-bottom: 2rem; }
+    .beauties__section-heading {
+      left: -5%; }
     .beauties-wrap {
       left: 0.2rem;
       left: 50%;
@@ -969,7 +971,9 @@ input.invalid {
     align-items: flex-start; }
   .nav {
     order: 3;
-    margin-top: 3.5rem; }
+    margin-top: 3.5rem;
+    position: absolute;
+    top: 2rem; }
     .nav__item {
       display: block;
       color: #ffffff;
@@ -980,7 +984,8 @@ input.invalid {
     align-self: flex-end;
     margin-top: -3rem; }
   .hero {
-    padding-left: 0; }
+    padding-left: 0;
+    margin-top: 15rem; }
     .hero__title {
       font-size: 3rem;
       line-height: normal; }
@@ -1078,6 +1083,9 @@ input.invalid {
       margin: auto; } }
 
 @media screen and (max-width: 480px) {
+  .menu {
+    margin-left: 2rem;
+    margin-right: 2rem; }
   .person {
     flex-basis: 100%; }
   .swiper-button-prev, .swiper-button-next {
