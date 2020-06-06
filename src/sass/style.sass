@@ -7,7 +7,7 @@ $primary: #ff6600
 .container
   width: 85%
   margin: auto
-  max-width: 1225px
+  max-width: 1098px
 .row
   display: flex
   align-items: flex-start
@@ -112,6 +112,8 @@ input.invalid
   display: flex
   justify-content: space-between
   align-items: center
+  margin-left: -5rem
+  margin-right: -5rem
 .logo
   display: flex
   &__link
@@ -163,7 +165,7 @@ input.invalid
 .hero
   position: relative
   padding-top: 2.78rem
-  padding-left: 11%
+  // padding-left: 11%
   &__title
     font-size: 5.8rem
     max-width: 27rem
@@ -177,13 +179,15 @@ input.invalid
 
 .beauties
   background-color: #f7f4f2
-  padding-left: 11%
+  // padding-left: 11%
   padding-bottom: 10rem
   padding-top: 20rem
   position: relative
   &-wrap
     position: absolute
     top: -15rem
+    left: 50%
+    margin-left: -32%
   &__section-heading
     position: absolute
     top: 91px
@@ -304,6 +308,7 @@ input.invalid
 
 .impressions
   padding: 10rem 0
+  // padding-left: 11%
   &__section-heading
     text-align: center
     margin-bottom: 7rem
@@ -312,8 +317,7 @@ input.invalid
   justify-content: space-between
   align-items: center
   margin: auto
-  padding-left: 6%
-  padding-right: 6%
+  // padding-right: 6%
 .person
   // flex-basis: 28%
   &__image
@@ -349,6 +353,7 @@ input.invalid
   &-slider-wrap
     position: relative
     flex-basis: 60%
+    margin-left: -5rem
   .swiper
     &-pagination
       bottom: 11%
@@ -371,8 +376,8 @@ input.invalid
       &-next
         right: -3%
   &__info
-    flex-basis: 40%
-    margin-left: 7rem
+    // flex-basis: 40%
+    // margin-left: 7rem
   &__title
     margin: 0
     font-size: 2.7rem
@@ -398,7 +403,7 @@ input.invalid
   color: $light
 .auto
   padding: 10rem 0
-  padding-left: 11%
+  // padding-left: 11%
   &-wrap
     display: flex
     justify-content: space-between
@@ -466,14 +471,14 @@ input.invalid
     margin-top: 2rem
     font-size: 1.35rem
 .tune
-  background: #222 url('../img/tune-bg.png') no-repeat center / cover
+  background: transparent url('../img/tune-bg.png') no-repeat center / cover
   align-self: flex-start
   width: 233px
   height: 207px
   margin-bottom: 3.21rem
   text-align: right
   &:nth-child(2)
-    background: #222 url('../img/tune-bg-2.png') no-repeat center / cover
+    background: transparent url('../img/tune-bg-2.png') no-repeat center / cover
   &-wrap
     display: flex
     align-items: center
@@ -495,7 +500,7 @@ input.invalid
     color: $secondary
 
 .order
-  padding-left: 11%
+  // padding-left: 11%
   &-wrap
     display: flex
     justify-content: space-between
@@ -614,6 +619,12 @@ input.invalid
   font-size: 1.3rem
   &:hover
     background-color: darken($primary, 15%)
+  &-thanks
+    display: inline-block
+    text-decoration: none
+    margin-top: 3rem
+    padding: 1rem 2rem
+    border-radius: 20px
 .promo
   color: $secondary
   font-size: 0.9rem
@@ -646,7 +657,7 @@ input.invalid
     font-size: 1.9rem
 
 .contacts
-  padding-left: 11%
+  // padding-left: 11%
   padding-top: 10rem
   padding-bottom: 3rem
   &-wrap
@@ -819,6 +830,9 @@ input.invalid
         background-color: $primary
         color: $light
         border-color: $primary
+  .menu
+    margin-left: 0
+    margin-right: 0
   .logo
     &__link
       margin-left: 0
@@ -864,13 +878,17 @@ input.invalid
         margin-bottom: 2rem
   .beauties
     padding-bottom: 2rem
+    &-wrap
+      left: 0.2rem
+      left: 50%
+      margin-left: -40%
   .impressions
     padding: 2rem 0
   .persons-wrap
     flex-wrap: wrap
     padding-left: 0
   .person
-    flex-basis: 45%
+    flex-basis: 50%
     text-align: center
     margin-bottom: 3rem
     &__image
@@ -880,6 +898,7 @@ input.invalid
       margin-bottom: 1.5rem
     &__text
       margin: auto
+      max-width: 20rem
   .about
     padding: 2rem 0
     &-wrap
@@ -893,6 +912,7 @@ input.invalid
       margin-bottom: 2rem
       align-self: flex-start
       flex-basis: 80%
+      margin-left: 0
     &__info
       flex-basis: 100%
     &__title
@@ -1008,8 +1028,17 @@ input.invalid
       margin-bottom: 2rem
   .beauties
     padding-left: 0
-    padding-top: 20rem
+    padding-top: 3rem
     // margin-top: 0
+    &-wrap
+      position: static
+      margin-top: 0
+      color: #000000
+      margin-left: 0
+      left: 0
+    &__section-heading
+      .section-title, .section-subtitle
+        color: #000000
     &__videos
       padding-top: 3rem
     .swiper
@@ -1095,8 +1124,6 @@ input.invalid
     &__copyright
       margin: auto
 @media screen and ( max-width: 480px )
-  .beauties
-    padding-top: 10rem
   .person
     flex-basis: 100%
   .swiper
