@@ -19,7 +19,8 @@
   outline: none; }
 
 html {
-  font-size: 14px; }
+  font-size: 14px;
+  background-color: #f7f4f2; }
 
 body {
   font-family: 'Myriad Pro', sans-serif;
@@ -80,6 +81,7 @@ input.invalid {
   padding-bottom: 30rem;
   background: #000 url("../img/main-bg.jpg") no-repeat center;
   background-size: cover;
+  height: 100vh;
   color: #ffffff; }
   .header-thanks {
     height: 100vh; }
@@ -185,19 +187,12 @@ input.invalid {
     color: #dddddd; }
 
 .beauties {
-  background-color: #f7f4f2;
   padding-bottom: 10rem;
-  padding-top: 20rem;
-  position: relative; }
-  .beauties-wrap {
-    position: absolute;
-    top: -15rem;
-    left: 50%;
-    margin-left: -32%; }
+  position: relative;
+  margin-top: -15rem; }
   .beauties__section-heading {
     position: absolute;
     top: 91px;
-    left: -11%;
     z-index: 3; }
   .beauties .swiper-button-prev, .beauties .swiper-button-next {
     top: calc(50% - 27px - 12px);
@@ -315,7 +310,8 @@ input.invalid {
   background: #ffffff url("../img/next.svg") no-repeat center; }
 
 .impressions {
-  padding: 10rem 0; }
+  padding: 10rem 0;
+  background-color: #ffffff; }
   .impressions__section-heading {
     text-align: center;
     margin-bottom: 7rem; }
@@ -791,8 +787,6 @@ input.invalid {
 @media screen and (max-width: 1200px) {
   html {
     font-size: 12px; }
-  .beauties__section-heading {
-    left: -16%; }
   .beauties .swiper-button-prev, .beauties .swiper-button-next {
     top: calc(50% - 42px); }
   .about .swiper-slide img {
@@ -859,12 +853,6 @@ input.invalid {
         margin-bottom: 2rem; }
   .beauties {
     padding-bottom: 2rem; }
-    .beauties__section-heading {
-      left: -5%; }
-    .beauties-wrap {
-      left: 0.2rem;
-      left: 50%;
-      margin-left: -40%; }
   .impressions {
     padding: 2rem 0; }
   .persons-wrap {
@@ -985,7 +973,7 @@ input.invalid {
     margin-top: -3rem; }
   .hero {
     padding-left: 0;
-    margin-top: 15rem; }
+    margin-top: 16rem; }
     .hero__title {
       font-size: 3rem;
       line-height: normal; }
@@ -1004,8 +992,6 @@ input.invalid {
       color: #000000;
       margin-left: 0;
       left: 0; }
-    .beauties__section-heading .section-title, .beauties__section-heading .section-subtitle {
-      color: #000000; }
     .beauties__videos {
       padding-top: 3rem; }
     .beauties .swiper-button-prev, .beauties .swiper-button-next {
